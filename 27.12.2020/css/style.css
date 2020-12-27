@@ -1,0 +1,43 @@
+@keyframes svganimation{
+          0%{
+                    stroke-dashoffset: 0%;
+          }
+          50%{
+                    stroke-dashoffset: 1000;
+          }
+          100%{
+                    stroke-dashoffset: 0%;
+          }
+}
+@keyframes icolor{
+          0%{
+              stroke: rgb(145, 109, 109);
+          }
+          25%{
+                    stroke: rgb(145, 74, 74);
+          }
+          50%{
+                    stroke: rgb(145, 43, 43);
+          }
+          100%{
+                    stroke: rgb(145, 18, 18);
+          }
+}
+.card{
+          border-radius: 20%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+}
+.card svg{
+          stroke-width: 3px;
+          stroke: red;
+          width: 50%;
+          height: 50%;
+          animation: icolor 2s infinite alternate;
+}
+.card:hover svg .tree {
+          stroke-dasharray: 20;
+          animation: svganimation 20s linear forwards;
+}
